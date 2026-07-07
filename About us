@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>About Our Project</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section>
+  <h2>Project Description</h2>
+  <p>The Secure Retail System is an online shopping platform designed to provide users with a safe, seamless, and convenient retail experience. 
+     It allows customers to browse products, add items to their cart, and complete purchases through a secure interface. 
+     The system focuses on user-friendly navigation, strong security measures, and efficient access to retail services. 
+     By combining simplicity with reliability, the platform ensures that users can shop confidently without worrying about data breaches or unsafe transactions.</p>
+</section>
+
+<section>
+  <h2>Problem Statement</h2>
+  <p>Many online shoppers face challenges such as insecure websites, confusing navigation, slow loading times, and unreliable checkout processes. 
+     These issues reduce trust and discourage users from completing purchases. 
+    Retailers also struggle to provide secure environments that protect customer information while maintaining ease of use. 
+    The Secure Retail System addresses these problems by offering a secure, intuitive, and responsive shopping platform that prioritizes user safety, accessibility, and smooth interaction from browsing to checkout.</p>
+</section>
+
+<section>
+  <h2>Team Information</h2>
+  <p>Our development team consists of dedicated members who collaborated to design, build, and refine the Secure Retail System: Project Manager, Developer, Tester, Reviewer, Presenter</p>
+</section>
+
+</body>
+</html>
