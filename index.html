@@ -187,16 +187,68 @@ footer{
     margin-top:60px;
 }
 
-@media(max-width:768px){
+/* Responsive design for tablets */
+@media (max-width: 768px) {
 
-.hero h1{
-    font-size:38px;
+    header {
+        flex-direction: column;
+        padding: 15px 5%;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin-left: 0;
+        font-size: 15px;
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .products {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
 }
 
-nav{
-    display:none;
-}
+/* Responsive design for mobile phones */
+@media (max-width: 480px) {
 
+    .logo {
+        font-size: 22px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+    }
 }
 
 </style>
