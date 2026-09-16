@@ -15,22 +15,22 @@ The purpose of this Week 2 data analysis is to identify the important informatio
 | Product ID | Uniquely identifies each product | System/Admin | System, Admin, Customer | Yes |
 | Product Name | Identifies the product | Admin | Customers, Admin | Yes |
 | Product Description | Provides information about the product | Admin | Customers | Yes |
-| Product Price | Shows the selling price | Admin | Customers, Cart, Order System | Yes |
+| Product Price | Shows the selling price of the product | Admin | Customers, Cart, Order System | Yes |
 | Product Image | Provides a visual representation of the product | Admin | Customers | No |
 | Stock Level | Records available product quantity | Admin/System | Admin, Order System | Yes |
 | Product Quantity | Records how many units a customer selects | Customer | Cart, Order System | Yes |
-| Cart ID | Identifies a shopping cart | System | Customer, System | Yes |
-| Cart Total | Calculates the total value of cart items | System | Customer, Order System | Yes |
+| Cart ID | Identifies a customer's shopping cart | System | Customer, System | Yes |
+| Cart Total | Calculates the total value of items in the cart | System | Customer, Order System | Yes |
 | User ID | Uniquely identifies a customer account | System | System, Admin | Yes |
 | Customer Name | Identifies the customer | Customer | Customer, Admin | Yes |
 | Customer Email | Identifies and provides contact information | Customer | System, Admin | Yes |
-| Customer Password | Allows the customer to authenticate | Customer | Authentication System | Yes |
-| User Role | Determines user access level | Admin/System | System, Admin | Yes |
+| Customer Password | Allows the customer to authenticate their account | Customer | Authentication System | Yes |
+| User Role | Determines the user's access level | Admin/System | System, Admin | Yes |
 | Order ID | Uniquely identifies an order | System | System, Admin | Yes |
-| Order Number | Provides an order reference | System | Customer, Admin | Yes |
+| Order Number | Provides a reference number for an order | System | Customer, Admin | Yes |
 | Order Date | Records when an order was placed | System | Customer, Admin | Yes |
-| Order Status | Shows the progress of an order | Staff/System | Customer, Admin | Yes |
-| Order Items | Records products included in an order | Customer/System | Customer, Admin, Order System | Yes |
+| Order Status | Shows the current progress of an order | Staff/System | Customer, Admin | Yes |
+| Order Items | Records the products included in an order | Customer/System | Customer, Admin, Order System | Yes |
 | Order Total | Records the total value of an order | System | Customer, Admin | Yes |
 
 ## 3. Data Sources
@@ -50,13 +50,13 @@ The current MVP is primarily frontend-based. The backend and database will be de
 
 ## 4. Data Flow
 
-The following diagram shows how information moves through the Five Star Retail System from the customer interface to the application and database.
+The following diagram shows how information moves through the Five Star Retail System.
 
 ```mermaid
 flowchart TD
     A[Customer] --> B[Web Interface]
 
-    B --> C[Login / User Management]
+    B --> C[Login and User Management]
     B --> D[Product Catalogue]
     B --> E[Shopping Cart]
     B --> F[Contact Form]
@@ -78,32 +78,54 @@ flowchart TD
     I --> M[Orders]
 
     M --> N[Order History]
-    I --> O[Reports & Administration]
+    I --> O[Reports and Administration]
+```
+
+### Data Flow Explanation
+
+The customer interacts with the Five Star Retail web interface to log in, browse products, manage the shopping cart, place orders and submit contact information.
+
+The frontend sends the relevant information to the backend application for processing. The backend validates and processes the information and communicates with the database.
+
+The database is planned to store information relating to users, products, carts and orders. Processed information can then be returned to the customer interface for display.
+
+Stored information can also support order history, reporting and administration.
+
+The current MVP is frontend-based, while the backend and database are planned for Capstone B development.
 
 ## 5. Data Quality and Risk Analysis
 
 | Data Item | Risk | Business Impact | Prevention Strategy |
 |---|---|---|---|
 | Product Name | Incorrect product name | Customer confusion | Data validation |
-| Product Price | Incorrect price | Incorrect charges | Price validation |
+| Product Price | Incorrect price | Incorrect customer charges | Price validation |
 | Product Quantity | Invalid quantity | Incorrect orders | Quantity validation |
 | Stock Level | Incorrect stock information | Customers may order unavailable products | Stock validation |
-| Customer Email | Invalid email | Customer cannot be contacted | Email format validation |
-| Password | Weak password | Increased security risk | Password requirements |
-| Password | Unsafe storage | User credentials may be exposed | Secure password hashing |
-| User Role | Incorrect role | Unauthorised access | Role-based access control |
-| Order Status | Incorrect status | Customer receives incorrect information | Controlled status updates |
+| Customer Email | Invalid email address | Customer cannot be contacted | Email format validation |
+| Customer Password | Weak password | Increased account security risk | Enforce password requirements |
+| Customer Password | Unsafe password storage | User credentials may be exposed | Secure password hashing |
+| User Role | Incorrect role assigned | Unauthorised access | Role-based access control |
+| Order Status | Incorrect order status | Customer receives incorrect information | Controlled status updates |
 | Order Total | Calculation error | Incorrect order value | Automatic calculation |
-| Product ID | Duplicate or incorrect ID | Incorrect product references | Unique identifiers |
-| Order ID | Duplicate or incorrect ID | Orders may be incorrectly associated | Unique identifiers |
+| Product ID | Duplicate or incorrect ID | Incorrect product references | Use unique identifiers |
+| Order ID | Duplicate or incorrect ID | Orders may be incorrectly associated | Use unique identifiers |
 
 ## 6. Future Development Planning
 
-### Information that should be stored permanently
+### Information That Should Be Stored Permanently
 
-The system should permanently store important information such as user accounts, products, cart information, orders and order history.
+The system should permanently store important information such as:
 
-### Information that changes frequently
+- User accounts
+- Product information
+- Cart information
+- Order information
+- Order history
+- Product stock information
+
+The planned Capstone B database will contain information relating to Users, Products, Cart and Orders.
+
+### Information That Changes Frequently
 
 The following information may change frequently:
 
@@ -115,7 +137,7 @@ The following information may change frequently:
 - User account status
 - User roles and permissions
 
-### Information restricted to administrators
+### Information Restricted to Administrators
 
 Administrative access should include:
 
@@ -128,7 +150,9 @@ Administrative access should include:
 - Order management
 - Customer account management
 
-### Information for future reports
+Customers should only be able to access information and functions relevant to their own accounts and permitted activities.
+
+### Information for Future Reports
 
 Future reports may include:
 
@@ -141,8 +165,9 @@ Future reports may include:
 - Order totals
 - Popular products
 - Customer order history
+- Customer enquiries
 
-### Information required for future Capstone B development
+### Information Required for Future Capstone B Development
 
 Future development may require:
 
@@ -162,12 +187,18 @@ Future development may require:
 
 ## 7. Data Management Plan
 
-Project data requirements will be documented in GitHub under the `/docs` directory. Changes will be tracked through commits and reviewed using Pull Requests.
+Project data requirements will be documented in GitHub under the `/docs` directory.
 
-Team members will review data requirements and make improvements where necessary. The documentation will be updated as the backend, API and database requirements become clearer during future Capstone B development.
+The Week 2 data analysis is stored in:
+
+`/docs/week2-data-analysis.md`
+
+Changes to the documentation will be tracked using GitHub commits. Pull Requests will be used for team review and collaboration.
+
+The team will review data requirements and make improvements where necessary. The documentation can be updated as the backend, API and database requirements become clearer during future Capstone B development.
 
 ## 8. Conclusion
 
 The Week 2 analysis identifies the main data required by the Five Star Retail system and explains how the data moves between customers, the web interface, application processes and the future database.
 
-The identified data requirements and quality risks will support future database design, backend development, authentication, order processing and reporting.
+The identified data requirements and quality risks will support future database design, backend development, authentication, order processing, reporting and system development.
