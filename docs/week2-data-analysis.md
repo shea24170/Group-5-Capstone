@@ -9,12 +9,12 @@ The Five Star Retail System is an online retail platform developed to provide cu
 The purpose of this Week 2 data analysis is to identify the important information used by the system, understand how data moves through the system, identify possible data quality risks and plan how data will be managed during future development.
 
 ## 1. Module Data Discovery
-- Customer and Authentication Data: Username, Password, Session Status 
-- Product and Catalogue Data: Product ID, Product Name, Product Description, Product Category, Product Price, Product Image, Product Availability (In stock/Out of Stock) 
-- Shopping Cart Data: Cart Item ID, Cart Quantity, Cart Total Price, Cart Session (temporary storage) 
-- Order and Check out Data: Order ID, Order Date, Order Status, Order Total, Payment Method, Delivery Address 
-- Contact Page Data: Contact Name, Contact Email, Contact Message 
-- About Us Page: Company Name, Company Description, Store Location, Support Email 
+- **Customer and Authentication Data**: Username, Password, Session Status 
+- **Product and Catalogue Data:** Product ID, Product Name, Product Description, Product Category, Product Price, Product Image, Product Availability (In stock/Out of Stock) 
+- **Shopping Cart Data:** Cart Item ID, Cart Quantity, Cart Total Price, Cart Session (temporary storage) 
+- **Order and Check out Data**: Order ID, Order Date, Order Status, Order Total, Payment Method, Delivery Address 
+- **Contact Page Data**: Contact Name, Contact Email, Contact Message 
+- **About Us Page**: Company Name, Company Description, Store Location, Support Email 
 
 ## 2. Project Data Inventory
 
@@ -41,22 +41,7 @@ The purpose of this Week 2 data analysis is to identify the important informatio
 | Order Items | Records the products included in an order | Customer/System | Customer, Admin, Order System | Yes |
 | Order Total | Records the total value of an order | System | Customer, Admin | Yes |
 
-## 3. Data Sources
-
-The main data sources for the Five Star Retail system include:
-
-- Product catalogue
-- Login form
-- User account information
-- Shopping cart
-- Order system
-- Contact form
-- Future database
-- Future backend/API
-
-The current MVP is primarily frontend-based. The backend and database will be developed in Capstone B to provide persistent data storage and processing.
-
-## 4. Data Flow
+## 3. Data Flow
 
 The following diagram shows how information moves through the Five Star Retail System.
 
@@ -101,7 +86,7 @@ Stored information can also support order history, reporting and administration.
 
 The current MVP is frontend-based, while the backend and database are planned for Capstone B development.
 
-## 5. Data Quality and Risk Analysis
+## 4. Data Quality and Risk Analysis
 
 | Data Item | Risk | Business Impact | Prevention Strategy |
 |---|---|---|---|
@@ -118,7 +103,7 @@ The current MVP is frontend-based, while the backend and database are planned fo
 | Product ID | Duplicate or incorrect ID | Incorrect product references | Use unique identifiers |
 | Order ID | Duplicate or incorrect ID | Orders may be incorrectly associated | Use unique identifiers |
 
-## 6. Future Development Planning
+## 5. Future Development Planning
 
 ### Information That Should Be Stored Permanently
 
@@ -193,19 +178,8 @@ Future development may require:
 - Testing
 - CI/CD
 
-## 7. Data Management Plan
 
-Project data requirements will be documented in GitHub under the `/docs` directory.
-
-The Week 2 data analysis is stored in:
-
-`/docs/week2-data-analysis.md`
-
-Changes to the documentation will be tracked using GitHub commits. Pull Requests will be used for team review and collaboration.
-
-The team will review data requirements and make improvements where necessary. The documentation can be updated as the backend, API and database requirements become clearer during future Capstone B development.
-
-## 8. Conclusion
+## 6. Conclusion
 
 The Week 2 analysis identifies the main data required by the Five Star Retail system and explains how the data moves between customers, the web interface, application processes and the future database.
 
