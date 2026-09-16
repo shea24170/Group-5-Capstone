@@ -2,11 +2,19 @@
 
 ## Five Star Retail System
 
-## 1. Introduction
+**Introduction**
 
 The Five Star Retail System is an online retail platform developed to provide customers with a digital shopping experience. The current MVP includes Home, Products, Cart, Orders, Login, Contact and About Us pages.
 
 The purpose of this Week 2 data analysis is to identify the important information used by the system, understand how data moves through the system, identify possible data quality risks and plan how data will be managed during future development.
+
+## 1. Module Data Discovery
+Customer and Authentication Data: Username, Password, Session Status 
+Product and Catalogue Data: Product ID, Product Name, Product Description, Product Category, Product Price, Product Image, Product Availability (In stock/Out of Stock) 
+Shopping Cart Data: Cart Item ID, Cart Quantity, Cart Total Price, Cart Session (temporary storage) 
+Order and Check out Data: Order ID, Order Date, Order Status, Order Total, Payment Method, Delivery Address 
+Contact Page Data: Contact Name, Contact Email, Contact Message 
+About Us Page: Company Name, Company Description, Store Location, Support Email 
 
 ## 2. Project Data Inventory
 
