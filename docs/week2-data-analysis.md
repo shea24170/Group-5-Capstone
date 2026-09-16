@@ -55,38 +55,30 @@ The following diagram shows how information moves through the Five Star Retail S
 ```mermaid
 flowchart TD
     A[Customer] --> B[Web Interface]
-    
+
     B --> C[Login / User Management]
     B --> D[Product Catalogue]
     B --> E[Shopping Cart]
     B --> F[Contact Form]
-    
+
     D --> E
     E --> G[Order Processing]
-    
+
     C --> H[Backend Application]
     D --> H
     E --> H
     F --> H
     G --> H
-    
+
     H --> I[(Database)]
-    
+
     I --> J[Users]
     I --> K[Products]
     I --> L[Cart]
     I --> M[Orders]
-    
+
     M --> N[Order History]
     I --> O[Reports & Administration]
-
-### Data Flow Explanation
-
-The customer interacts with the Five Star Retail web interface to log in, browse products, manage the shopping cart, place orders and submit contact information. The frontend sends the relevant information to the backend application for processing.
-
-The backend validates and processes the information and communicates with the database. The database is planned to store information relating to users, products, carts and orders. Processed information can then be returned to the customer interface for display, while stored information can support order history, reporting and administration.
-
-The current MVP is frontend-based, while the backend and database are planned for Capstone B development.
 
 ## 5. Data Quality and Risk Analysis
 
